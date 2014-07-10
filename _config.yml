@@ -1,0 +1,14 @@
+# Variables set by GitHub
+safe: true
+lsi: false
+pygments: true
+source: .
+
+markdown: redcarpet
+
+# Enable HTTP redirects
+gems:
+  - jekyll-redirect-from
+
+# Ignore patterns
+exclude: [scripts/]
