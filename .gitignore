@@ -1,0 +1,5 @@
+/.bundle
+/_site
+/Gemfile.lock
+/css/*.css
+!/css/styles.css
