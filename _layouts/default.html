@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="The Beauty Rooms, a Luxury Skin Care &amp; Beauty Salon for first Class Skin-Care, Massage and Beauty Treatments in the heart of the beautiful Peak District.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Chris Cummins">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    {%include google-analytics.html %}
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle"
+                  data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Beauty Rooms Matlock</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            {% if page.section == "treatments" %}
+            <li class="active"><a href="/treatments/">Our Treatments</a></li>
+            {% else %}
+            <li><a href="/treatments/">Our Treatments</a></li>
+            {% endif %}
+            {% if page.section == "gallery" %}
+            <li class="active"><a href="/gallery/">Gallery</a></li>
+            {% else %}
+            <li><a href="/gallery/">Gallery</a></li>
+            {% endif %}
+            {% if page.section == "about" %}
+            <li class="active"><a href="/about/">About Us</a></li>
+            {% else %}
+            <li><a href="/about/">About Us</a></li>
+            {% endif %}
+            {% if page.section == "contact" %}
+            <li class="active"><a href="/contact/">Contact / Bookings</a></li>
+            {% else %}
+            <li><a href="/contact/">Contact / Bookings</a></li>
+            {% endif %}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    {{ content }}
+
+    <div class="container">
+      <hr/>
+      <footer>
+        <p>
+          Website by <a href="http://chriscummins.cc">Chris Cummins</a>.
+          Copyright &copy; 2011 - 2014 The Beauty Rooms, Matlock, UK.
+        </p>
+      </footer>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/site.js"></script>
+
+  </body>
+</html>
