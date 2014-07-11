@@ -4,6 +4,9 @@ lsi: false
 pygments: true
 source: .
 
+# URL prefix:
+prefix: "/beautyroomsmatlock.com"
+
 markdown: redcarpet
 
 # Enable HTTP redirects
