@@ -48,3 +48,114 @@
 // Utility classes
 @import "utilities.less";
 @import "responsive-utilities.less";
+
+
+// Mixins
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+     -moz-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+
+.transform(@transformation) {
+  -webkit-transform: @transformation;
+      -ms-transform: @transformation;
+          transform: @transformation;
+}
+
+
+// Site styles
+
+body {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.navbar {
+    background-color: #fff;
+
+    .navbar-toggle {
+        border: 1px solid @gray-light;
+
+        .icon-bar {
+            background-color: @gray-light;
+        }
+    }
+    .navbar-nav {
+        li.active {
+            background-color: @gray-lighter;
+        }
+    }
+}
+
+.jumbotron {
+    background-color: desaturate(lighten(@brand-primary, 7.5%), 32.5%);
+    color: #fff;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+
+    img {
+        margin: 0;
+        width: 33%;
+        border-radius: 6px;
+    }
+}
+
+.frame-16-9 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+
+    // Rounded frame border:
+    border-radius: @border-radius-base;
+    overflow: hidden;
+    z-index: 1;
+
+    iframe, img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0; 
+        top: 0;
+        .transform(scale(1.0));
+        .transition-duration(0.45s);
+    }
+
+    img:hover {
+        .transform(scale(1.1));
+    }
+}
+
+table.opening-times {
+    > tbody > tr:first-child,
+    > tbody > tr:last-child {
+        background-color: @table-bg-accent;
+    }
+}
+
+.contact-form {
+    table {
+        width: 100%;
+
+        tr {
+            td {
+                padding: 10px;
+
+                input[type="text"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    textarea {
+        padding: 10px;
+        margin-right: 10px;
+        width: 100%;
+    }
+}
