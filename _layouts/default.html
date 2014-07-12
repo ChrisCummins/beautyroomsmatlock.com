@@ -79,6 +79,9 @@
     {% for item in page.js %}
     <script src="{{ item }}"></script>
     {% endfor %}
+    {% for item in page.local_js %}
+    <script src="{{ site.prefix }}{{ item }}"></script>
+    {% endfor %}
 
   </body>
 </html>
