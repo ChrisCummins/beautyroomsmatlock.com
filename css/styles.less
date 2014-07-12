@@ -169,7 +169,11 @@ table.opening-times {
 }
 
 /* Wookmark gallery tiles */
+#photos {
+    min-height: 800px; // Give it some starting height while images load
+}
 #tiles {
+    display: none; // Hidden at first, loaded by JS
     list-style-type: none;
     position: relative;
     margin: 0;

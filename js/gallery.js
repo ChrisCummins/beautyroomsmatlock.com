@@ -413,6 +413,9 @@ $(document).ready(function() {
 
 $(window).load(function() {
 
+  $('.gallery-loading').fadeOut();
+  $('#tiles').fadeIn();
+
   $('#tiles li').wookmark({
     align: 'center',
     autoResize: false,
