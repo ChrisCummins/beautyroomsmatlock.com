@@ -130,12 +130,6 @@ body {
         height: 100%;
         left: 0;
         top: 0;
-        .transform(scale(1.0));
-        .transition-duration(0.45s);
-    }
-
-    img:hover {
-        .transform(scale(1.1));
     }
 }
 
@@ -189,11 +183,7 @@ table.opening-times {
             border-radius: @border-radius-base;
             display: block;
             cursor: pointer;
-            -webkit-transition: 0.3s;
-            -moz-transition:    0.3s;
-            -o-transition:      0.3s;
-            transition:         0.3s;
-
+            .transition-duration(0.3s);
             &:hover, &:focus {
                 opacity: 0.6;
             }
