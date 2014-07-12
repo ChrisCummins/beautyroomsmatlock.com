@@ -391,17 +391,10 @@
  */
 $(document).ready(function() {
 
-  $('#tiles li').wookmark({
-    align: 'center',
-    autoResize: false,
-    container: $('#photos'), // Optional, used for some extra CSS styling
-    offset: 2 // Optional, the distance between grid items
-  });
-
   // Wrap images with fancybox links
   $('#tiles li > img').each(function() {
     $(this).wrap('<a class="fancybox" rel="gallery" href="' +
-                 $(this).attr('src') + '"></a>');
+                 $(this).attr('src').replace(/-thumb.jpg/, '.jpg') + '"></a>');
   });
 
   $('.fancybox').fancybox({
@@ -415,4 +408,16 @@ $(document).ready(function() {
       }
     }
   });
+
+});
+
+$(window).load(function() {
+
+  $('#tiles li').wookmark({
+    align: 'center',
+    autoResize: false,
+    container: $('#photos'), // Optional, used for some extra CSS styling
+    offset: 2 // Optional, the distance between grid items
+  });
+
 });
