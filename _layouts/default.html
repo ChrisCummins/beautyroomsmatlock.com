@@ -4,7 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
+    {% if page.title %}
+    <title>Beauty Rooms Matlock | {{ page.title }}</title>
+    {% else %}
+    <title>Beauty Rooms Matlock</title>
+    {% endif %}
     <meta name="description" content="The Beauty Rooms, a Luxury Skin Care &amp; Beauty Salon for first Class Skin-Care, Massage and Beauty Treatments in the heart of the beautiful Peak District.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Chris Cummins">
