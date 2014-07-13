@@ -133,6 +133,12 @@ body {
     }
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 table.opening-times {
     > tbody > tr:first-child,
     > tbody > tr:last-child {
@@ -159,6 +165,49 @@ table.opening-times {
         padding: 10px;
         margin-right: 10px;
         width: 100%;
+    }
+}
+
+div.treatments {
+    h1 {
+        font-size: @font-size-h3;
+        color: @brand-primary;
+    }
+
+    img {
+        border-radius: @border-radius-base;
+    }
+}
+
+// Support navbar menu on hover:
+ul.nav {
+    li.dropdown {
+        &:hover {
+            > ul.dropdown-menu {
+                display: block;
+            }
+        }
+    }
+}
+
+ul.treatments {
+    list-style: none;
+
+    li {
+        margin-bottom: 0.7em;
+        font-size: @font-size-large;
+
+        &:before {
+            content: "»";
+        }
+
+        .description {
+            float: right !important;
+            font-style: italic;
+            color: @gray;
+            font-size: @font-size-base;
+            padding-top: (@font-size-large - @font-size-base) / 2;
+        }
     }
 }
 

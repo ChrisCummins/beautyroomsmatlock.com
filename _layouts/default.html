@@ -40,10 +40,25 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             {% if page.section == "treatments" %}
-            <li class="active"><a href="{{ site.prefix }}/treatments/">Our Treatments</a></li>
+            <li class="active dropdown">
+              <a class="dropdown-toggle disabled" data-toggle="dropdown"
+                 href="{{ site.prefix }}/treatments/">Our Treatments <b class="caret"></b></a>
             {% else %}
-            <li><a href="{{ site.prefix }}/treatments/">Our Treatments</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle disabled" data-toggle="dropdown"
+                 href="{{ site.prefix }}/treatments/">Our Treatments <b class="caret"></b></a>
             {% endif %}
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="/treatments/venus-freeze/">Venus Freeze™ Treatments</a></li>
+                  <li><a href="/treatments/carita/">Carita Facial Treatments</a></li>
+                  <li><a href="/treatments/elemis-massage/">Elemis Massage Treatments</a></li>
+                  <li><a href="/treatments/elemis-facial/">Elemis Facial Treatments</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/treatments/hair/">Hair Removal Treatments</a></li>
+                  <li><a href="/treatments/eyelash/">Eyelash Treatments</a></li>
+                  <li><a href="/treatments/other/">Other Treatments</a></li>
+              </ul>
+            </li>
             {% if page.section == "gallery" %}
             <li class="active"><a href="{{ site.prefix }}/gallery/">Gallery</a></li>
             {% else %}
