@@ -1,0 +1,52 @@
+---
+layout: default
+title: Contact Us
+section: contact
+---
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Contact Us</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+
+    </div>
+
+    <div class="col-md-8">
+
+      <div class="contact-form">
+        <form action="http://getsimpleform.com/messages?form_api_token=59c5e5d1d8b61f52f165b074a9ffb7e5" method="post">
+          <!-- <input type="hidden" name="redirect_to" value="<the complete return url e.g. http://fooey.com/thank-.html>" /> -->
+          <table>
+            <tr>
+              <td><label for="name">Name</label></td>
+              <td><input name="name" type="text" /></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email</label></td>
+              <td><input name="email" type="text" /></td>
+            </tr>
+            <tr>
+              <td><label for="telephone">Telephone</label></td>
+              <td><input name="telephone" type="text" /></td>
+            </tr>
+          </table>
+
+          <div class="message">
+            <textarea rows="9" name="message" id="tswcomments"></textarea>
+            <input type="submit" value="Send Message" />
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <img class="rounded" src="{{ site.prefix }}/img/contact.jpg">
+    </div>
+  </div>
+</div>

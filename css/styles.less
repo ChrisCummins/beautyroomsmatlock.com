@@ -72,6 +72,9 @@
 .rounded() {
     .border-radius(@border-radius-base);
 }
+.rounded {
+    .rounded();
+}
 
 // Site styles
 
@@ -166,10 +169,18 @@ table.opening-times {
         }
     }
 
-    textarea {
+    .message {
         padding: 10px;
-        margin-right: 10px;
-        width: 100%;
+
+        textarea {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            float: right;
+        }
     }
 }
 
