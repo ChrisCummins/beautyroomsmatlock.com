@@ -5,7 +5,7 @@ pygments: true
 source: .
 
 # URL prefix:
-prefix: "/beautyroomsmatlock.com"
+prefix: ""
 
 markdown: redcarpet
 
